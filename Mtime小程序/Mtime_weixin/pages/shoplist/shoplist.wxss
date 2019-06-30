@@ -1,0 +1,57 @@
+/* pages/shoplist/shoplist.wxss */
+/*1:当前商品信息*/
+.mov{
+  display: flex;    /*默认子元素水平排列*/
+  position: relative;/*打分星星定位*/
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+/*2:当前图片*/
+.mov-img{
+  width:120rpx;
+  height:160rpx;
+  margin-right: 20rpx;/*右侧外边距*/
+}
+/*3:列表信息*/
+.list-info{
+  display: flex;         /*弹性布局*/
+  flex-direction: column;/*按列方式布局子元素*/
+  width:580rpx;
+  line-height: 1.5;
+  color:#666;
+  font-size: 12px;
+}
+/*4：电影名称*/
+.list-dname{
+  width:380rpx;
+  color:#000;
+  font-size:18px;        /*店铺名称字大一些*/
+}
+/*5:通用功能:载取字符串添加省略号*/
+.ell{
+  overflow: hidden;   
+   white-space: nowrap; 
+  text-overflow: ellipsis;
+}    
+.mov_details{
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/*6:打分*/
+.mov-star{
+  position: absolute;
+  right:20rpx;
+  top:20rpx;
+}
+.star-after{
+  color:#e2e2e2;  /*底层灰色星星*/
+}
+.star-before{
+  position: absolute;
+  top:0;
+  left:0;
+  overflow: hidden;
+  color:#f19e38;
+}

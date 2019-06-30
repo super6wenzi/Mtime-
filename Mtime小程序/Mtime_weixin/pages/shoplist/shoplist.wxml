@@ -1,0 +1,22 @@
+<!--pages/shoplist/shoplist.wxml-->
+<view class="container">
+   <!--列表-->
+   <view class="mov" wx:for="{{list}}" wx:key="index" bindtap='mov_details'>
+    <!--图片-->
+    <image src="http://127.0.0.1:3000/{{item.img_url}}" class="mov-img"/>
+    <!--列表信息-->
+    <view class="list-info">
+      <!--名称-->
+      <view class="list-dname ell">
+       {{item.dname}}
+      </view>
+      <!--详情  -->
+     <view class='mov_details'>{{item.ditails}}</view>
+    </view>
+    <!--打分-->
+    <view class="mov-star">
+      <view class="star-after">★★★★★</view>
+      <view class="star-before" style="width:{{item.point}}%">★★★★★</view>
+    </view>
+   </view>
+</view>

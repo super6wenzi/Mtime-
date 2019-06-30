@@ -1,0 +1,33 @@
+/**1:轮播图:index.wxss**/
+.slider,.slider swiper,.slider image{
+  height: 390rpx;
+  width: 100%;
+}
+
+/*2:九宫格*/
+.index-nav{
+  display: flex;   /*弹性布局*/
+  flex-wrap: wrap; /*子元素换行显示*/
+}
+.index-nav .nav-item{
+   width:33.33333%;     /*商品宽度*/
+   height:200rpx;       /*商品高度*/
+   box-sizing: border-box;
+   display: flex;       /*当前元素弹性布局*/
+   flex-direction: column; /*元素按列排整*/
+   justify-content: center;/*水平居中*/
+   align-items: center;    /*垂直居中*/
+   font-size:14px;
+   /*右侧底部边线 3 6 去除右侧边线*/
+   border-bottom:1rpx solid #ddd;
+   border-right:1rpx solid #ddd;
+}
+/*去除右侧 3 6 9 边线*/
+.index-nav .nav-item:nth-child(3n){
+  border-right: 0;
+}
+.index-nav .nav-item image{
+  width:102rpx;
+  height:102rpx;
+}
+
